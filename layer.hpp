@@ -15,7 +15,7 @@ class Layer{
         std::vector<float> forward(std::vector<float> input);
 
         friend std::ostream & operator<<(std::ostream & os, Layer layer);
-        std::vector<Neuron> getNeurons() const {return m_neurons;}
+        std::vector<Neuron> & getNeurons()  {return m_neurons;}
         int getLayerSize() const {return m_layer_size;}
         int getInputSize() const {return m_input_size;}
     private:
